@@ -14,6 +14,8 @@ namespace Kairos.Domain.Entities
 
         public decimal Value { get; set; }
 
+        public bool IsActive { get; set; }
+
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }

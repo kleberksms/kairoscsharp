@@ -18,13 +18,19 @@ namespace Kairos.Domain.Entities
 
         public int ParentId { get; set; }
 
-        public bool IsActive { get; set; }
-
         public int Priority { get; set; }
 
         public int MeasureId { get; set; }
 
+        public int StatusId { get; set; }
+
+        public virtual Measure Measure { get; set; }
+
         public virtual IEnumerable<Ticket> Children { get; set; }
+
+        public virtual IEnumerable<Task> Tasks { get; set; }
+
+        public bool IsActive { get; set; }
 
         public DateTime Created { get; set; }
 

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Measure.cs" />
+    <Compile Include="Entities\Sprint.cs" />
+    <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\Task.cs" />
     <Compile Include="Entities\Ticket.cs" />
     <Compile Include="Entities\Timesheet.cs" />

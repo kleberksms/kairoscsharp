@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Kairos.Domain.Entities
 {
-    public class Task
+    public class Status
     {
         public int Id { get; set; }
 
-        public string Title { get; set; }
-
-        public string Description { get; set; }
+        public string Name { get; set; }
 
         public bool IsActive { get; set; }
 
