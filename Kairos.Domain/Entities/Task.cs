@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kairos.Domain.Entities
 {
-    public class Ticket
+    public class Task
     {
         public int Id { get; set; }
 
@@ -14,23 +14,8 @@ namespace Kairos.Domain.Entities
 
         public string Description { get; set; }
 
-        public int AuthorId { get; set; }
-
-        public int ParentId { get; set; }
-
-        public bool IsActive { get; set; }
-
-        public int Priority { get; set; }
-
-        public int MeasureId { get; set; }
-
-        public virtual IEnumerable<Ticket> Children { get; set; }
-
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }
-
-
-
     }
 }

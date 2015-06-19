@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Measure.cs" />
+    <Compile Include="Entities\Task.cs" />
     <Compile Include="Entities\Ticket.cs" />
+    <Compile Include="Entities\Timesheet.cs" />
     <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
     <Compile Include="Interfaces\Services\IBaseServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
