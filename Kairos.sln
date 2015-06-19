@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{9341B24A-9881-47AB-B68B-53615EB2BDD2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{5C07AFA5-B4D6-4C2A-A3AE-48D92800DD47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{B3DB3C82-012A-49F6-9406-D00925A1BC8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{2F68938A-88A3-4A96-9454-27E10C86E7BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{5F80B88A-0592-4256-8650-84F9D60EE966}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{CA34701D-FA09-48B8-9FD8-339C98AF2711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.Domain", "Kairos.Domain\Kairos.Domain.csproj", "{29BB9736-FD94-446C-BB85-EAE5EE38F4DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29BB9736-FD94-446C-BB85-EAE5EE38F4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BB9736-FD94-446C-BB85-EAE5EE38F4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BB9736-FD94-446C-BB85-EAE5EE38F4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BB9736-FD94-446C-BB85-EAE5EE38F4DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA34701D-FA09-48B8-9FD8-339C98AF2711} = {5F80B88A-0592-4256-8650-84F9D60EE966}
+		{29BB9736-FD94-446C-BB85-EAE5EE38F4DE} = {2F68938A-88A3-4A96-9454-27E10C86E7BE}
+	EndGlobalSection
+EndGlobal
