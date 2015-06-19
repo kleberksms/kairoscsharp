@@ -30,6 +30,10 @@ namespace Kairos.Domain.Entities
 
         public virtual IEnumerable<Task> Tasks { get; set; }
 
+        public virtual IEnumerable<Comment> Comments { get; set; }
+
+        public bool IsClosed { get; set; }
+
         public bool IsActive { get; set; }
 
         public DateTime Created { get; set; }

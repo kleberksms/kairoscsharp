@@ -6,25 +6,18 @@ using System.Threading.Tasks;
 
 namespace Kairos.Domain.Entities
 {
-    public class Sprint
+    public class Team
     {
         public int Id { get; set; }
 
-        public int Interval { get; set; }
+        public string Name { get; set; }
 
-        public DateTime StartExpected { get; set; }
-
-        public DateTime Finish { get; set; }
-
-        public virtual IEnumerable<Ticket> Tickets { get; set; }
-
-        public virtual IEnumerable<Comment> Comments { get; set; }
+        //Devera ter uma lista de users tipo time scrum - composta pelo PO, SM e TD
 
         public bool IsActive { get; set; }
 
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }
-
     }
 }

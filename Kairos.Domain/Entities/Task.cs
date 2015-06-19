@@ -16,6 +16,8 @@ namespace Kairos.Domain.Entities
 
         public bool IsActive { get; set; }
 
+        public virtual IEnumerable<Comment> Comments { get; set; }
+
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }

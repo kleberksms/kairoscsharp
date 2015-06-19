@@ -14,6 +14,14 @@ namespace Kairos.Domain.Entities
 
         public DateTime End { get; set; }
 
+        public int TaskId { get; set; }
+
+        public int TicketId { get; set; }
+
+        public virtual Task Task { get; set; }
+
+        public virtual Ticket Ticket { get; set; }
+
         public int Breaks { get; set; }
 
         public int SumIntervalTime { get; set; }

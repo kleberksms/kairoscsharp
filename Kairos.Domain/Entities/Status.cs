@@ -12,6 +12,8 @@ namespace Kairos.Domain.Entities
 
         public string Name { get; set; }
 
+        public bool IsTypeClosed { get; set; }
+
         public bool IsActive { get; set; }
 
         public DateTime Created { get; set; }
