@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 namespace Kairos.Domain.Interfaces.Services
 {
-    public interface IBaseServices<TEntity> where TEntity : class
+    public interface IBaseService<TEntity> where TEntity : class
     {
         void Add(TEntity obj);
 
