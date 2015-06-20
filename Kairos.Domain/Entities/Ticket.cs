@@ -40,7 +40,5 @@ namespace Kairos.Domain.Entities
 
         public DateTime Modified { get; set; }
 
-
-
     }
 }
