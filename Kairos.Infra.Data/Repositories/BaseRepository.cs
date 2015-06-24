@@ -1,39 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kairos.Domain.Interfaces.Repositories;
+using Kairos.Infra.Data.Context;
 
 namespace Kairos.Infra.Data.Repositories
 {
     public class BaseRepository<TEntity> : IDisposable, IBaseRepository<TEntity> where TEntity : class
     {
-        public void Add(TEntiry obj)
+        protected KairosContext Db = new KairosContext();
+
+        public void Add(TEntity obj)
         {
-            Db.Set<TEntiry>().Add(obj);
+            Db.Set<TEntity>().Add(obj);
             Db.SaveChanges();
         }
 
-        public TEntiry GetById(int id)
+        public TEntity GetById(int id)
         {
-            return Db.Set<TEntiry>().Find(id);
+            return Db.Set<TEntity>().Find(id);
         }
 
-        public IEnumerable<TEntiry> GetAll()
+        public IEnumerable<TEntity> GetAll()
         {
-            return Db.Set<TEntiry>().ToList();
+            return Db.Set<TEntity>().ToList();
         }
 
-        public void Update(TEntiry obj)
+        public void Update(TEntity obj)
         {
             Db.Entry(obj).State = EntityState.Modified;
             Db.SaveChanges();
         }
 
-        public void Remove(TEntiry obj)
+        public void Remove(TEntity obj)
         {
-            Db.Set<TEntiry>().Remove(obj);
+            Db.Set<TEntity>().Remove(obj);
             Db.SaveChanges();
         }
 

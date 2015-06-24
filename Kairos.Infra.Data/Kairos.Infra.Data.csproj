@@ -50,6 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\KairosContext.cs" />
+    <Compile Include="EntityConfig\CommentConfiguration.cs" />
+    <Compile Include="EntityConfig\IssueConfiguration.cs" />
+    <Compile Include="EntityConfig\MeasureConfiguration.cs" />
+    <Compile Include="EntityConfig\RankingConfiguration.cs" />
+    <Compile Include="EntityConfig\SprintConfiguration.cs" />
+    <Compile Include="EntityConfig\StatusConfiguration.cs" />
+    <Compile Include="EntityConfig\TeamConfiguration.cs" />
+    <Compile Include="EntityConfig\TicketConfiguration.cs" />
+    <Compile Include="EntityConfig\TimesheetConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CommentRepository.cs" />
@@ -57,14 +66,12 @@
     <Compile Include="Repositories\RankingRepository.cs" />
     <Compile Include="Repositories\SprintRepository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />
-    <Compile Include="Repositories\TaskRepository.cs" />
+    <Compile Include="Repositories\IssueRepository.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
     <Compile Include="Repositories\TicketRepository.cs" />
     <Compile Include="Repositories\TimesheetRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityConfig\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Kairos.Domain\Kairos.Domain.csproj">
       <Project>{29bb9736-fd94-446c-bb85-eae5ee38f4de}</Project>

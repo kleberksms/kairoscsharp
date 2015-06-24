@@ -23,7 +23,7 @@ namespace Kairos.Infra.Data.Context
 
         public DbSet<Status> Status { get; set; }
 
-        //public DbSet<Task> Tasks { get; set; }        
+        public DbSet<Issue> Issues { get; set; }        
 
         public DbSet<Team> Teams { get; set; }
 

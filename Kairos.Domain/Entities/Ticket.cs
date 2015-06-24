@@ -28,7 +28,7 @@ namespace Kairos.Domain.Entities
 
         public virtual IEnumerable<Ticket> Children { get; set; }
 
-        public virtual IEnumerable<Task> Tasks { get; set; }
+        public virtual IEnumerable<Issue> Issues { get; set; }
 
         public virtual IEnumerable<Comment> Comments { get; set; }
 

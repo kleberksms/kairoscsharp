@@ -2,7 +2,7 @@
 
 namespace Kairos.Domain.Interfaces.Repositories
 {
-    public interface ITaskRepository : IBaseRepository<Task>
+    public interface IIssueRepository : IBaseRepository<Issue>
     {
     }
 }

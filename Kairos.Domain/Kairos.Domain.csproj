@@ -45,7 +45,7 @@
     <Compile Include="Entities\Ranking.cs" />
     <Compile Include="Entities\Sprint.cs" />
     <Compile Include="Entities\Status.cs" />
-    <Compile Include="Entities\Task.cs" />
+    <Compile Include="Entities\Issue.cs" />
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\Ticket.cs" />
     <Compile Include="Entities\Timesheet.cs" />
@@ -55,7 +55,7 @@
     <Compile Include="Interfaces\Repositories\IRankingRepository.cs" />
     <Compile Include="Interfaces\Repositories\ISprintRepository.cs" />
     <Compile Include="Interfaces\Repositories\IStatusRepository.cs" />
-    <Compile Include="Interfaces\Repositories\ITaskRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IIssueRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITeamRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITicketRepository.cs" />
     <Compile Include="Interfaces\Repositories\ITimesheetRepository.cs" />
@@ -65,7 +65,7 @@
     <Compile Include="Interfaces\Services\IRankingService.cs" />
     <Compile Include="Interfaces\Services\ISprintService.cs" />
     <Compile Include="Interfaces\Services\IStatusService.cs" />
-    <Compile Include="Interfaces\Services\ITaskService.cs" />
+    <Compile Include="Interfaces\Services\IIssueService.cs" />
     <Compile Include="Interfaces\Services\ITeamService.cs" />
     <Compile Include="Interfaces\Services\ITicketService.cs" />
     <Compile Include="Interfaces\Services\ITimesheetService.cs" />
@@ -76,7 +76,7 @@
     <Compile Include="Services\RankingService.cs" />
     <Compile Include="Services\SprintService.cs" />
     <Compile Include="Services\StatusService.cs" />
-    <Compile Include="Services\TaskService.cs" />
+    <Compile Include="Services\IssueService.cs" />
     <Compile Include="Services\TeamService.cs" />
     <Compile Include="Services\TicketService.cs" />
     <Compile Include="Services\TimesheetService.cs" />

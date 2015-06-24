@@ -18,7 +18,7 @@ namespace Kairos.Domain.Entities
 
         public int TicketId { get; set; }
 
-        public virtual Task Task { get; set; }
+        public virtual Issue Issue { get; set; }
 
         public virtual Ticket Ticket { get; set; }
 

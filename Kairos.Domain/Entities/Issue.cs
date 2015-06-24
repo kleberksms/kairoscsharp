@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kairos.Domain.Entities
 {
-    public class Task
+    public class Issue
     {
         public int Id { get; set; }
 
@@ -16,7 +16,7 @@ namespace Kairos.Domain.Entities
 
         public bool IsActive { get; set; }
 
-        //public virtual IEnumerable<Comment> Comments { get; set; }
+        public virtual IEnumerable<Comment> Comments { get; set; }
 
         public DateTime Created { get; set; }
 
