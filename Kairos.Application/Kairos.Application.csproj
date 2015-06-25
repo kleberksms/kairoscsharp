@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseApplicationService.cs" />
+    <Compile Include="CommentApplicationService.cs" />
     <Compile Include="Interfaces\IBaseApplicationService.cs" />
     <Compile Include="Interfaces\ICommentApplicationService.cs" />
     <Compile Include="Interfaces\IIssueApplicationService.cs" />
@@ -50,7 +52,15 @@
     <Compile Include="Interfaces\ITeamApplicationService.cs" />
     <Compile Include="Interfaces\ITicketApplicationService.cs" />
     <Compile Include="Interfaces\ITimesheetApplicationService.cs" />
+    <Compile Include="IssueApplicationService.cs" />
+    <Compile Include="MeasureApplicationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RankingApplicationService.cs" />
+    <Compile Include="SprintApplicationService.cs" />
+    <Compile Include="StatusApplicationService.cs" />
+    <Compile Include="TeamApplicationService.cs" />
+    <Compile Include="TicketApplicationService.cs" />
+    <Compile Include="TimesheetApplicationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kairos.Domain\Kairos.Domain.csproj">
