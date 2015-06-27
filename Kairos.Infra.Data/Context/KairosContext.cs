@@ -46,6 +46,7 @@ namespace Kairos.Infra.Data.Context
                 .Configure(p => p.HasMaxLength(75));
 
             modelBuilder.Configurations.Add(new TicketConfiguration());
+
         }
 
         public override int SaveChanges()

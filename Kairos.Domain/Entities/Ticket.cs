@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Kairos.Domain.Entities
 {
@@ -12,21 +13,21 @@ namespace Kairos.Domain.Entities
 
         public int AuthorId { get; set; }
 
-        public int ParentId { get; set; }
-
         public int Priority { get; set; }
 
         public int MeasureId { get; set; }
 
         public int StatusId { get; set; }
 
-        //public virtual Measure Measure { get; set; }
+        public virtual Measure Measure { get; set; }
 
-        //public virtual IEnumerable<Ticket> Children { get; set; }
+        public int? ParentId { get; set; }
 
-        //public virtual IEnumerable<Issue> Issues { get; set; }
+        public Ticket Parent { get; set; }
 
-        //public virtual IEnumerable<Comment> Comments { get; set; }
+        public virtual IEnumerable<Issue> Issues { get; set; }
+
+        public virtual IEnumerable<Comment> Comments { get; set; }
 
         public bool IsClosed { get; set; }
 

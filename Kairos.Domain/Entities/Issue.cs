@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Kairos.Domain.Entities
 {
@@ -12,7 +13,9 @@ namespace Kairos.Domain.Entities
 
         public bool IsActive { get; set; }
 
-        //public virtual IEnumerable<Comment> Comments { get; set; }
+        public virtual Ticket Ticket { get; set; }
+
+        public virtual IEnumerable<Comment> Comments { get; set; }
 
         public DateTime Created { get; set; }
 

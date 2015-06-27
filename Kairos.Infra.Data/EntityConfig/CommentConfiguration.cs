@@ -7,7 +7,8 @@ namespace Kairos.Infra.Data.EntityConfig
     {
         public CommentConfiguration()
         {
-            
+            HasKey(c => c.Id);
+
         }
     }
 }
