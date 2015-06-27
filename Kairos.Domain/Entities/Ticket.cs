@@ -13,11 +13,11 @@ namespace Kairos.Domain.Entities
 
         public int AuthorId { get; set; }
 
-        public int PriorityId { get; set; }
+        public int? PriorityId { get; set; }
 
         public virtual Priority Priority { get; set; }
 
-        public int MeasureId { get; set; }
+        public int? MeasureId { get; set; }
 
         public virtual Measure Measure { get; set; }
 
