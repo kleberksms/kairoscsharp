@@ -5,7 +5,7 @@ using Kairos.Domain.Interfaces.Services;
 
 namespace Kairos.Domain.Services
 {
-    public class BaseService<TEntity> : IDisposable, IBaseServices<TEntity> where TEntity : class
+    public class BaseService<TEntity> : IDisposable, IBaseService<TEntity> where TEntity : class
     {
 
         private readonly IBaseRepository<TEntity> _repository;

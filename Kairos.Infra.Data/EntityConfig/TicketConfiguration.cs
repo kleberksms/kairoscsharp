@@ -7,7 +7,16 @@ namespace Kairos.Infra.Data.EntityConfig
     {
         public TicketConfiguration()
         {
-            
+            HasKey(c => c.Id);
+
+            Property(c => c.Title)
+                .IsRequired()
+                .HasMaxLength(150);
+
+            Property(c => c.Description)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
         }
     }
 }
