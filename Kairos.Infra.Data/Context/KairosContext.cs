@@ -3,12 +3,13 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using Kairos.Domain.Entities;
+using Kairos.Infra.Data.EntityConfig;
 
 namespace Kairos.Infra.Data.Context
 {
     public class KairosContext : DbContext
     {
-        public KairosContext() : base("kairos"){}
+        public KairosContext() : base("Kairos"){}
 
         public DbSet<Comment> Comments { get; set; }
 
@@ -44,7 +45,7 @@ namespace Kairos.Infra.Data.Context
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(75));
 
-            //modelBuilder.Configurations.Add(new EntityConfiguration());
+            modelBuilder.Configurations.Add(new TicketConfiguration());
         }
 
         public override int SaveChanges()
