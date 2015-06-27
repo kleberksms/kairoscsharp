@@ -187,6 +187,7 @@
     <Compile Include="Controllers\IssueController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeasuresController.cs" />
+    <Compile Include="Controllers\PrioritiesController.cs" />
     <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Controllers\SprintsController.cs" />
     <Compile Include="Controllers\StatusController.cs" />
@@ -203,6 +204,7 @@
     <Compile Include="ViewModels\CommentViewModel.cs" />
     <Compile Include="ViewModels\IssueViewModel.cs" />
     <Compile Include="ViewModels\MeasureViewModel.cs" />
+    <Compile Include="ViewModels\PriorityViewModel.cs" />
     <Compile Include="ViewModels\RankingViewModel.cs" />
     <Compile Include="ViewModels\SprintViewModel.cs" />
     <Compile Include="ViewModels\StatusViewModel.cs" />
@@ -272,6 +274,7 @@
     <Folder Include="Views\Comments\" />
     <Folder Include="Views\Issue\" />
     <Folder Include="Views\Measures\" />
+    <Folder Include="Views\Priorities\" />
     <Folder Include="Views\Ranking\" />
     <Folder Include="Views\Sprints\" />
     <Folder Include="Views\Status\" />

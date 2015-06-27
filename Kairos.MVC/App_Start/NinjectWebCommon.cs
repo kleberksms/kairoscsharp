@@ -73,6 +73,7 @@ namespace Kairos.MVC.App_Start
             kernel.Bind<ICommentApplicationService>().To<CommentApplicationService>();
             kernel.Bind<IIssueApplicationService>().To<IssueApplicationService>();
             kernel.Bind<IMeasureApplicationService>().To<MeasureApplicationService>();
+            kernel.Bind<IPriorityApplicationService>().To<PriorityApplicationService>();
             kernel.Bind<IRankingApplicationService>().To<RankingApplicationService>();
             kernel.Bind<ISprintApplicationService>().To<SprintApplicationService>();
             kernel.Bind<IStatusApplicationService>().To<StatusApplicationService>();
@@ -84,6 +85,7 @@ namespace Kairos.MVC.App_Start
             kernel.Bind<ICommentService>().To<CommentService>();
             kernel.Bind<IIssueService>().To<IssueService>();
             kernel.Bind<IMeasureService>().To<MeasureService>();
+            kernel.Bind<IPriorityService>().To<PriorityService>();
             kernel.Bind<IRankingService>().To<RankingService>();
             kernel.Bind<ISprintService>().To<SprintService>();
             kernel.Bind<IStatusService>().To<StatusService>();
@@ -95,6 +97,7 @@ namespace Kairos.MVC.App_Start
             kernel.Bind<ICommentRepository>().To<CommentRepository>();
             kernel.Bind<IIssueRepository>().To<IssueRepository>();
             kernel.Bind<IMeasureRepository>().To<MeasureRepository>();
+            kernel.Bind<IPriorityRepository>().To<PriorityRepository>();
             kernel.Bind<IRankingRepository>().To<RankingRepository>();
             kernel.Bind<ISprintRepository>().To<SprintRepository>();
             kernel.Bind<IStatusRepository>().To<StatusRepository>();

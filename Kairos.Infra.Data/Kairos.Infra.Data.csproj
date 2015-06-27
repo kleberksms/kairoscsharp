@@ -54,6 +54,7 @@
     <Compile Include="EntityConfig\CommentConfiguration.cs" />
     <Compile Include="EntityConfig\IssueConfiguration.cs" />
     <Compile Include="EntityConfig\MeasureConfiguration.cs" />
+    <Compile Include="EntityConfig\PriorityConfiguration.cs" />
     <Compile Include="EntityConfig\RankingConfiguration.cs" />
     <Compile Include="EntityConfig\SprintConfiguration.cs" />
     <Compile Include="EntityConfig\StatusConfiguration.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CommentRepository.cs" />
     <Compile Include="Repositories\MeasureRepository.cs" />
+    <Compile Include="Repositories\PriorityRepository.cs" />
     <Compile Include="Repositories\RankingRepository.cs" />
     <Compile Include="Repositories\SprintRepository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />

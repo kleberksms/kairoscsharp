@@ -15,6 +15,8 @@ namespace Kairos.Infra.Data.Context
 
         public DbSet<Measure> Measures { get; set; }
 
+        public DbSet<Priority> Priorities { get; set; }
+
         public DbSet<Ranking> Rankings { get; set; }
 
         public DbSet<Sprint> Sprints { get; set; }

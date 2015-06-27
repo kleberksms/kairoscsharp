@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Entities\Comment.cs" />
     <Compile Include="Entities\Measure.cs" />
+    <Compile Include="Entities\Priority.cs" />
     <Compile Include="Entities\Ranking.cs" />
     <Compile Include="Entities\Sprint.cs" />
     <Compile Include="Entities\Status.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
     <Compile Include="Interfaces\Repositories\ICommentRepository.cs" />
     <Compile Include="Interfaces\Repositories\IMeasureRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPriorityRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRankingRepository.cs" />
     <Compile Include="Interfaces\Repositories\ISprintRepository.cs" />
     <Compile Include="Interfaces\Repositories\IStatusRepository.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Interfaces\Services\IBaseService.cs" />
     <Compile Include="Interfaces\Services\ICommentService.cs" />
     <Compile Include="Interfaces\Services\IMeasureService.cs" />
+    <Compile Include="Interfaces\Services\IPriorityService.cs" />
     <Compile Include="Interfaces\Services\IRankingService.cs" />
     <Compile Include="Interfaces\Services\ISprintService.cs" />
     <Compile Include="Interfaces\Services\IStatusService.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\CommentService.cs" />
     <Compile Include="Services\MeasureService.cs" />
+    <Compile Include="Services\PriorityService.cs" />
     <Compile Include="Services\RankingService.cs" />
     <Compile Include="Services\SprintService.cs" />
     <Compile Include="Services\StatusService.cs" />
