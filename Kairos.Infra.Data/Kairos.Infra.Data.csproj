@@ -60,6 +60,7 @@
     <Compile Include="EntityConfig\TeamConfiguration.cs" />
     <Compile Include="EntityConfig\TicketConfiguration.cs" />
     <Compile Include="EntityConfig\TimesheetConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CommentRepository.cs" />
