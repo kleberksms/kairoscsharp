@@ -17,9 +17,11 @@ namespace Kairos.Domain.Entities
 
         public int MeasureId { get; set; }
 
+        public virtual Measure Measure { get; set; }
+
         public int StatusId { get; set; }
 
-        public virtual Measure Measure { get; set; }
+        public virtual Status Status { get; set; }
 
         public int? ParentId { get; set; }
 
