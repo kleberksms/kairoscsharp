@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kairos.Domain.Entities
 {
@@ -24,13 +20,13 @@ namespace Kairos.Domain.Entities
 
         public int StatusId { get; set; }
 
-        public virtual Measure Measure { get; set; }
+        //public virtual Measure Measure { get; set; }
 
-        public virtual IEnumerable<Ticket> Children { get; set; }
+        //public virtual IEnumerable<Ticket> Children { get; set; }
 
-        public virtual IEnumerable<Issue> Issues { get; set; }
+        //public virtual IEnumerable<Issue> Issues { get; set; }
 
-        public virtual IEnumerable<Comment> Comments { get; set; }
+        //public virtual IEnumerable<Comment> Comments { get; set; }
 
         public bool IsClosed { get; set; }
 
