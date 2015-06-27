@@ -1,10 +1,11 @@
-﻿using Kairos.Domain.Entities;
+﻿using Kairos.Application.Interfaces;
+using Kairos.Domain.Entities;
 using Kairos.Domain.Interfaces.Repositories;
 using Kairos.Domain.Interfaces.Services;
 
 namespace Kairos.Application
 {
-    public class TeamApplicationService : BaseApplicationService<Team>, ITeamRepository
+    public class TeamApplicationService : BaseApplicationService<Team>, ITeamApplicationService
     {
         private readonly ITeamService _teamService;
 
