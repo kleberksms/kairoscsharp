@@ -12,10 +12,12 @@ namespace Kairos.MVC.ViewModels
         [Required(ErrorMessage = "Campo título é obrigatório")]
         [MaxLength(150, ErrorMessage = "Permetido no máximo {0} caracteres")]
         [MinLength(5, ErrorMessage = "Deve haver no mínimo {0} caracteres")]
+        [DisplayName("Título")]
         public string Title { get; set; }
 
         [MinLength(10, ErrorMessage = "Deve haver no mínimo {0} caracteres")]
-        public string Sobrenome { get; set; }
+        [DisplayName("Descrição")]
+        public string Description { get; set; }
 
         [ScaffoldColumn(false)]
         public int AuthorId { get; set; }

@@ -3,21 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
+using Kairos.Application.Interfaces;
+using Kairos.Domain.Entities;
+using Kairos.MVC.ViewModels;
 
 namespace Kairos.MVC.Controllers
 {
     public class TicketsController : Controller
     {
+
+        private readonly ITicketApplicationService _ticketApplicationService;
+
+        public TicketsController(ITicketApplicationService ticketApplicationService)
+        {
+            _ticketApplicationService = ticketApplicationService;
+        }
+
+
         // GET: Tickets
         public ActionResult Index()
         {
-            return View();
+            Mapper.CreateMap<Ticket, TicketViewModel>();
+            var ticketViewModel = Mapper.Map<IEnumerable<Ticket>, IEnumerable<TicketViewModel>>(_ticketApplicationService.GetAll());
+            return View(ticketViewModel);
         }
 
         // GET: Tickets/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var ticket = _ticketApplicationService.GetById(id);
+            var ticketViewModel = Mapper.Map<Ticket, TicketViewModel>(ticket);
+            return View(ticketViewModel);
         }
 
         // GET: Tickets/Create
@@ -28,62 +45,56 @@ namespace Kairos.MVC.Controllers
 
         // POST: Tickets/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(TicketViewModel ticket)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                var ticketDomain = Mapper.Map<TicketViewModel, Ticket>(ticket);
+                _ticketApplicationService.Add(ticketDomain);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(ticket);
         }
 
         // GET: Tickets/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var ticket = _ticketApplicationService.GetById(id);
+            var ticketViewModel = Mapper.Map<Ticket, TicketViewModel>(ticket);
+            return View(ticketViewModel);
         }
 
         // POST: Tickets/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(TicketViewModel ticket)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                var ticketDomain = Mapper.Map<TicketViewModel, Ticket>(ticket);
+                _ticketApplicationService.Add(ticketDomain);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(ticket);
         }
 
         // GET: Tickets/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var ticket = _ticketApplicationService.GetById(id);
+            var ticketViewModel = Mapper.Map<Ticket, TicketViewModel>(ticket);
+            return View(ticketViewModel);
         }
 
         // POST: Tickets/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            var ticket = _ticketApplicationService.GetById(id);
+            _ticketApplicationService.Remove(ticket);
+            return RedirectToAction("Index");
         }
     }
 }
