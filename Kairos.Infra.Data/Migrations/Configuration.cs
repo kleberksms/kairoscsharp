@@ -5,14 +5,14 @@ namespace Kairos.Infra.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Kairos.Infra.Data.Context.KairosContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Context.KairosContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Kairos.Infra.Data.Context.KairosContext context)
+        protected override void Seed(Context.KairosContext context)
         {
             //  This method will be called after migrating to the latest version.
 
