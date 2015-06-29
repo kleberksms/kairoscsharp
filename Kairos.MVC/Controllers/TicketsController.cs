@@ -45,6 +45,7 @@ namespace Kairos.MVC.Controllers
         public ActionResult Create()
         {
             ViewBag.PriorityId = new SelectList(_priorityApplicationService.GetAll(), "PriorityId", "Name");
+            ViewBag.ParentId = new SelectList(_priorityApplicationService.GetAll(), "ParentId", "Title");
             return View();
         }
 
