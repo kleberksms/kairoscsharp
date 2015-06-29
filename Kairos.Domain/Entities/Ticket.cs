@@ -5,13 +5,18 @@ namespace Kairos.Domain.Entities
 {
     public class Ticket
     {
+        public Ticket()
+        {
+            SetDefaultValuesOnCreate();
+        }
+
         public int Id { get; set; }
 
         public string Title { get; set; }
 
         public string Description { get; set; }
 
-        public int AuthorId { get; set; }
+        public int? AuthorId { get; set; }
 
         public int? PriorityId { get; set; }
 
@@ -21,7 +26,7 @@ namespace Kairos.Domain.Entities
 
         public virtual Measure Measure { get; set; }
 
-        public int StatusId { get; set; }
+        public int? StatusId { get; set; }
 
         public virtual Status Status { get; set; }
 
@@ -40,6 +45,13 @@ namespace Kairos.Domain.Entities
         public DateTime Created { get; set; }
 
         public DateTime Modified { get; set; }
+
+        private void SetDefaultValuesOnCreate()
+        {
+            if (!Id.Equals(null)) return;
+            IsActive = true;
+            IsClosed = false;
+        }
 
     }
 }
