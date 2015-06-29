@@ -60,6 +60,8 @@ namespace Kairos.MVC.Controllers
                 _ticketApplicationService.Add(ticketDomain);
                 return RedirectToAction("Index");
             }
+            ViewBag.PriorityId = new SelectList(_priorityApplicationService.GetAll(), "Id", "Name");
+            ViewBag.ParentId = new SelectList(_ticketApplicationService.GetAll(), "Id", "Id");
             return View(ticket);
         }
 
