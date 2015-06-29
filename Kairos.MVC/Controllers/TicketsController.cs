@@ -14,10 +14,14 @@ namespace Kairos.MVC.Controllers
     {
 
         private readonly ITicketApplicationService _ticketApplicationService;
+        private readonly IPriorityApplicationService _priorityApplicationService;
+        private readonly IMeasureApplicationService _measureApplicationService;
 
-        public TicketsController(ITicketApplicationService ticketApplicationService)
+        public TicketsController(ITicketApplicationService ticketApplicationService, IPriorityApplicationService priorityApplicationService, IMeasureApplicationService measureApplicationService)
         {
             _ticketApplicationService = ticketApplicationService;
+            _priorityApplicationService = priorityApplicationService;
+            _measureApplicationService = measureApplicationService;
         }
 
 
@@ -40,6 +44,7 @@ namespace Kairos.MVC.Controllers
         // GET: Tickets/Create
         public ActionResult Create()
         {
+            ViewBag.PriorityId = new SelectList(_priorityApplicationService.GetAll(), "PriorityId", "Name");
             return View();
         }
 
