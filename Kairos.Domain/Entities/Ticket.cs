@@ -53,5 +53,10 @@ namespace Kairos.Domain.Entities
             IsClosed = false;
         }
 
+        public bool IsMyTicket(Ticket ticket)
+        {
+            return true;
+        }
+
     }
 }
