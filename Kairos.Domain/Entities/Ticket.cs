@@ -48,7 +48,8 @@ namespace Kairos.Domain.Entities
 
         private void SetDefaultValuesOnCreate()
         {
-            if (!Id.Equals(null)) return;
+
+            if (!Id.Equals(0)) return;
             IsActive = true;
             IsClosed = false;
         }

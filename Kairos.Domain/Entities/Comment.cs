@@ -8,13 +8,17 @@ namespace Kairos.Domain.Entities
 
         public string Text { get; set; }
 
-        public int AuthorId { get; set; }
+        public int? AuthorId { get; set; }
 
-        public int SolverId { get; set; }
+        public int? SolverId { get; set; }
 
-        public int  Type { get; set; } //se vai ser um comentario do tipo Sprint, Task ou Ticket
+        public int? TicketId { get; set; }
 
-        public int TypeId { get; set; }//Id do typo
+        public virtual Ticket Ticket { get; set; }
+
+        public int? IssueId { get; set; }
+
+        public virtual Issue Issue { get; set; }
 
         public bool IsActive { get; set; }
 
