@@ -15,13 +15,13 @@ namespace Kairos.MVC.Controllers
 
         private readonly ITicketApplicationService _ticketApplicationService;
         private readonly IPriorityApplicationService _priorityApplicationService;
-        private readonly IMeasureApplicationService _measureApplicationService;
+        //private readonly IMeasureApplicationService _measureApplicationService;
 
         public TicketsController(ITicketApplicationService ticketApplicationService, IPriorityApplicationService priorityApplicationService, IMeasureApplicationService measureApplicationService)
         {
             _ticketApplicationService = ticketApplicationService;
             _priorityApplicationService = priorityApplicationService;
-            _measureApplicationService = measureApplicationService;
+           // _measureApplicationService = measureApplicationService;
         }
 
 

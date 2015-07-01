@@ -19,8 +19,8 @@ namespace Kairos.MVC.ViewModels
         [Required(ErrorMessage = "Campo descrição é obrigatório")]
         public string Description { get; set; }
 
-        [ScaffoldColumn(false)]
-        public int AuthorId { get; set; }
+        //[ScaffoldColumn(false)]
+        //public int AuthorId { get; set; }
         
         [DisplayName("Ticket relaionado")]
         public int ParentId { get; set; }
@@ -28,11 +28,11 @@ namespace Kairos.MVC.ViewModels
         [DisplayName("Prioridade")]
         public int PriorityId { get; set; }
 
-        [ScaffoldColumn(false)]
-        public int MeasureId { get; set; }
+        //[ScaffoldColumn(false)]
+        //public int MeasureId { get; set; }
 
-        [ScaffoldColumn(false)]
-        public int StatusId { get; set; }
+        //[ScaffoldColumn(false)]
+        //public int StatusId { get; set; }
 
         [ScaffoldColumn(false)]
         public bool IsClosed { get; set; }
