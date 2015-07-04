@@ -331,13 +331,14 @@
     <Content Include="Views\Tickets\Details.cshtml" />
     <Content Include="Views\Tickets\Edit.cshtml" />
     <Content Include="Views\Tickets\Index.cshtml" />
+    <Content Include="Views\Priorities\Create.cshtml" />
+    <Content Include="Views\Priorities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Comments\" />
     <Folder Include="Views\Issue\" />
     <Folder Include="Views\Measures\" />
-    <Folder Include="Views\Priorities\" />
     <Folder Include="Views\Ranking\" />
     <Folder Include="Views\Sprints\" />
     <Folder Include="Views\Status\" />

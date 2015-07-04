@@ -16,6 +16,7 @@ namespace Kairos.MVC.AutoMapper
             Mapper.CreateMap<CommentViewModel, Comment>();
             Mapper.CreateMap<IssueViewModel, Issue>();
             Mapper.CreateMap<MeasureViewModel, Measure>();
+            Mapper.CreateMap<PriorityViewModel, Priority>();
             Mapper.CreateMap<RankingViewModel, Ranking>();
             Mapper.CreateMap<SprintViewModel, Sprint>();
             Mapper.CreateMap<StatusViewModel, Status>();

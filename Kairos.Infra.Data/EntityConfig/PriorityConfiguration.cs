@@ -7,6 +7,7 @@ namespace Kairos.Infra.Data.EntityConfig
     {
         public PriorityConfiguration()
         {
+            HasKey(c => c.Id);
             
         }
     }

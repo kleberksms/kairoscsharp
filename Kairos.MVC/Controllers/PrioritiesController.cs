@@ -45,16 +45,15 @@ namespace Kairos.MVC.Controllers
         // POST: Priorities/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PriorityViewModel Priority)
+        public ActionResult Create(PriorityViewModel priority)
         {
             if (ModelState.IsValid)
             {
-                var priorityDomain = Mapper.Map<PriorityViewModel, Priority>(Priority);
+                var priorityDomain = Mapper.Map<PriorityViewModel, Priority>(priority);
                 _priorityApplicationService.Add(priorityDomain);
                 return RedirectToAction("Index");
             }
-            ViewBag.PriorityId = new SelectList(_priorityApplicationService.GetAll(), "Id", "Name");
-            return View(Priority);
+            return View(priority);
         }
 
         // GET: Priorities/Edit/5
