@@ -3,87 +3,99 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
+using Kairos.Application.Interfaces;
+using Kairos.Domain.Entities;
+using Kairos.MVC.ViewModels;
 
 namespace Kairos.MVC.Controllers
 {
     public class PrioritiesController : Controller
     {
+        private readonly IPriorityApplicationService _priorityApplicationService;
+
+        public PrioritiesController(IPriorityApplicationService priorityApplicationService)
+        {
+            _priorityApplicationService = priorityApplicationService;
+        }
+
         // GET: Priorities
         public ActionResult Index()
         {
-            return View();
+            Mapper.CreateMap<Priority, PriorityViewModel>();
+            var priorityViewModel = Mapper.Map<IEnumerable<Priority>, IEnumerable<PriorityViewModel>>(_priorityApplicationService.GetAll());
+            return View(priorityViewModel);
         }
 
         // GET: Priorities/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var priority = _priorityApplicationService.GetById(id);
+            var priorityViewModel = Mapper.Map<Priority, PriorityViewModel>(priority);
+            return View(priorityViewModel);
         }
 
         // GET: Priorities/Create
         public ActionResult Create()
         {
+            ViewBag.PriorityId = new SelectList(_priorityApplicationService.GetAll(), "Id", "Name");
             return View();
         }
 
         // POST: Priorities/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(PriorityViewModel Priority)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                var priorityDomain = Mapper.Map<PriorityViewModel, Priority>(Priority);
+                _priorityApplicationService.Add(priorityDomain);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            ViewBag.PriorityId = new SelectList(_priorityApplicationService.GetAll(), "Id", "Name");
+            return View(Priority);
         }
 
         // GET: Priorities/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var priority = _priorityApplicationService.GetById(id);
+            var priorityViewModel = Mapper.Map<Priority, PriorityViewModel>(priority);
+            return View(priorityViewModel);
         }
 
         // POST: Priorities/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(PriorityViewModel priority)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                var priorityDomain = Mapper.Map<PriorityViewModel, Priority>(priority);
+                _priorityApplicationService.Add(priorityDomain);
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(priority);
         }
 
         // GET: Priorities/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var priority = _priorityApplicationService.GetById(id);
+            var priorityViewModel = Mapper.Map<Priority, PriorityViewModel>(priority);
+            return View(priorityViewModel);
         }
 
         // POST: Priorities/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            var priority = _priorityApplicationService.GetById(id);
+            _priorityApplicationService.Remove(priority);
+            return RedirectToAction("Index");
         }
+ 
     }
 }
