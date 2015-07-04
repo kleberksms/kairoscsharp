@@ -22,8 +22,8 @@ namespace Kairos.MVC.ViewModels
         //[ScaffoldColumn(false)]
         //public int AuthorId { get; set; }
         
-        [DisplayName("Ticket relaionado")]
-        public int ParentId { get; set; }
+        [DisplayName("Ticket relacionado")]
+        public int? ParentId { get; set; }
 
         [DisplayName("Prioridade")]
         public int PriorityId { get; set; }

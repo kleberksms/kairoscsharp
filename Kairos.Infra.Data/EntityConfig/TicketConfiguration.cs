@@ -17,6 +17,9 @@ namespace Kairos.Infra.Data.EntityConfig
                 .IsRequired()
                 .HasColumnType("TEXT");
 
+            Property(c => c.ParentId)
+                .IsOptional();
+
             HasOptional(c => c.Parent)
                 .WithMany()
                 .HasForeignKey(e => e.ParentId);
